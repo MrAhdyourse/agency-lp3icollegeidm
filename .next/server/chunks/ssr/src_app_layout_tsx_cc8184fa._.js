@@ -1,0 +1,3 @@
+module.exports=[27572,a=>{"use strict";var b=a.i(7997);let c="Agency WNI - Portal Rekanan",d="Portal informasi produk dan knowledge untuk rekanan agensi LP3I College",e=["agency","lp3i","college","rekanan","produk","knowledge"],f={title:c,description:d,keywords:[...e]};function g({children:a}){return(0,b.jsxs)("html",{lang:"id",children:[(0,b.jsxs)("head",{children:[(0,b.jsx)("meta",{charSet:"utf-8"}),(0,b.jsx)("meta",{name:"viewport",content:"width=device-width, initial-scale=1"}),(0,b.jsx)("link",{rel:"icon",href:"/favicon.ico"})]}),(0,b.jsx)("body",{className:"min-h-screen bg-gray-50",children:a})]})}a.s(["default",()=>g,"metadata",0,f],27572)}];
+
+//# sourceMappingURL=src_app_layout_tsx_cc8184fa._.js.map

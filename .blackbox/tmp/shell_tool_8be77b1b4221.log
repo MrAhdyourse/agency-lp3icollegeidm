@@ -1,0 +1,16 @@
+
+> agency-wni@1.0.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.104.71:3000
+
+✓ Starting...
+✓ Ready in 1004ms
+○ Compiling / ...
+ GET / 200 in 12.4s (compile: 11.7s, render: 752ms)
+✓ Finished writing to filesystem cache in 12.8s
+○ Compiling /_not-found/page ...
+ GET /produk/ 404 in 7.2s (compile: 6.8s, render: 340ms)
+ GET / 200 in 55ms (compile: 4ms, render: 51ms)
