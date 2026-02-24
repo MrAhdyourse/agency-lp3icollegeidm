@@ -1,0 +1,178 @@
+/**
+ * Global Styles
+ * File: src/app/globals.css
+ * Purpose: CSS global dan Tailwind imports (v4 syntax)
+ */
+
+/* Import Google Fonts - MUST BE FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+/* Custom Theme Variables */
+@theme {
+  /* Warna Navy Blue */
+  --color-navy-50: #e7e9ef;
+  --color-navy-100: #c3c9d6;
+  --color-navy-200: #9aa5bd;
+  --color-navy-300: #7181a4;
+  --color-navy-400: #536491;
+  --color-navy-500: #35477d;
+  --color-navy-600: #2d3c69;
+  --color-navy-700: #1e3a5f;
+  --color-navy-800: #162d4a;
+  --color-navy-900: #0f1f33;
+
+  /* Warna Gold */
+  --color-gold-50: #fdf9e9;
+  --color-gold-100: #f9efc7;
+  --color-gold-200: #f4e39a;
+  --color-gold-300: #efd76d;
+  --color-gold-400: #ebce4b;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #c9a02e;
+  --color-gold-700: #b88c23;
+  --color-gold-800: #a6791c;
+  --color-gold-900: #8a6217;
+
+  /* Font Family */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-sidebar: 2px 0 8px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+/* Card Component */
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--color-navy-700);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-navy-800);
+}
+
+.btn-secondary {
+  background-color: var(--color-gold-500);
+  color: var(--color-navy-900);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-gold-600);
+}
+
+/* Link Styles */
+.link {
+  color: var(--color-navy-700);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--color-gold-600);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-info {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f5f9;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Font Heading Utility */
+.font-heading {
+  font-family: 'Poppins', system-ui, sans-serif;
+}
