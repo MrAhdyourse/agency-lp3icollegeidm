@@ -12,8 +12,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '',
-  assetPrefix: '',
+  basePath: '/agency-lp3icollegeidm',
+  assetPrefix: '/agency-lp3icollegeidm/',
 }
 
 export default nextConfig
