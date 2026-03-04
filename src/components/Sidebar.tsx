@@ -7,6 +7,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { menuData } from '@/data/menuData'
 import { MenuItem } from '@/types/menu.types'
 import Icon from './Icon'
@@ -49,63 +50,98 @@ const Sidebar: React.FC<SidebarProps> = ({
     return (
       <li key={item.id} className="mb-1">
         {/* Menu Item */}
-        <a
-          href={item.href || '#'}
-          onClick={(e) => {
-            if (hasChildren) {
-              e.preventDefault()
-              handleMenuClick(item)
-            }
-          }}
-          className={`
-            flex items-center gap-3 px-4 py-3 rounded-lg
-            transition-all duration-200 ease-in-out
-            ${isSubmenu ? 'ml-4 text-sm' : ''}
-            ${hasChildren ? 'cursor-pointer' : 'hover:bg-navy-600'}
-            text-white/90 hover:text-white
-            group
-          `}
-        >
-          {/* Icon */}
-          {item.icon && !isCollapsed && (
-            <Icon 
-              name={item.icon} 
-              size={20} 
-              className="text-gold-400 group-hover:text-gold-300" 
-            />
-          )}
-          
-          {/* Label */}
-          {!isCollapsed && (
-            <span className="flex-1 font-medium">{item.label}</span>
-          )}
-          
-          {/* Badge */}
-          {!isCollapsed && item.badge && (
-            <span className={`
-              px-2 py-0.5 text-xs font-semibold rounded-full
-              ${item.badgeColor === 'success' ? 'bg-green-500' : ''}
-              ${item.badgeColor === 'warning' ? 'bg-yellow-500' : ''}
-              ${item.badgeColor === 'error' ? 'bg-red-500' : ''}
-              ${item.badgeColor === 'info' ? 'bg-blue-500' : ''}
-              text-white
-            `}>
-              {item.badge}
-            </span>
-          )}
-          
-          {/* Chevron for submenu */}
-          {!isCollapsed && hasChildren && (
-            <Icon 
-              name="chevronDown" 
-              size={16} 
-              className={`
-                transition-transform duration-200
-                ${isSubmenuOpen ? 'rotate-180' : ''}
-              `} 
-            />
-          )}
-        </a>
+        {hasChildren ? (
+          <button
+            onClick={() => handleMenuClick(item)}
+            className={`
+              w-full flex items-center gap-3 px-4 py-3 rounded-lg
+              transition-all duration-200 ease-in-out
+              ${isSubmenu ? 'ml-4 text-sm' : ''}
+              text-white/90 hover:text-white hover:bg-navy-600
+              group
+            `}
+          >
+            {/* Icon */}
+            {item.icon && !isCollapsed && (
+              <Icon 
+                name={item.icon} 
+                size={20} 
+                className="text-gold-400 group-hover:text-gold-300" 
+              />
+            )}
+            
+            {/* Label */}
+            {!isCollapsed && (
+              <span className="flex-1 font-medium text-left">{item.label}</span>
+            )}
+            
+            {/* Badge */}
+            {!isCollapsed && item.badge && (
+              <span className={`
+                px-2 py-0.5 text-xs font-semibold rounded-full
+                ${item.badgeColor === 'success' ? 'bg-green-500' : ''}
+                ${item.badgeColor === 'warning' ? 'bg-yellow-500' : ''}
+                ${item.badgeColor === 'error' ? 'bg-red-500' : ''}
+                ${item.badgeColor === 'info' ? 'bg-blue-500' : ''}
+                text-white
+              `}>
+                {item.badge}
+              </span>
+            )}
+            
+            {/* Chevron for submenu */}
+            {!isCollapsed && hasChildren && (
+              <Icon 
+                name="chevronDown" 
+                size={16} 
+                className={`
+                  transition-transform duration-200
+                  ${isSubmenuOpen ? 'rotate-180' : ''}
+                `} 
+              />
+            )}
+          </button>
+        ) : (
+          <Link
+            href={item.href || '#'}
+            onClick={onClose}
+            className={`
+              flex items-center gap-3 px-4 py-3 rounded-lg
+              transition-all duration-200 ease-in-out
+              ${isSubmenu ? 'ml-4 text-sm' : ''}
+              text-white/90 hover:text-white hover:bg-navy-600
+              group
+            `}
+          >
+            {/* Icon */}
+            {item.icon && !isCollapsed && (
+              <Icon 
+                name={item.icon} 
+                size={20} 
+                className="text-gold-400 group-hover:text-gold-300" 
+              />
+            )}
+            
+            {/* Label */}
+            {!isCollapsed && (
+              <span className="flex-1 font-medium">{item.label}</span>
+            )}
+            
+            {/* Badge */}
+            {!isCollapsed && item.badge && (
+              <span className={`
+                px-2 py-0.5 text-xs font-semibold rounded-full
+                ${item.badgeColor === 'success' ? 'bg-green-500' : ''}
+                ${item.badgeColor === 'warning' ? 'bg-yellow-500' : ''}
+                ${item.badgeColor === 'error' ? 'bg-red-500' : ''}
+                ${item.badgeColor === 'info' ? 'bg-blue-500' : ''}
+                text-white
+              `}>
+                {item.badge}
+              </span>
+            )}
+          </Link>
+        )}
 
         {/* Submenu */}
         {!isCollapsed && hasChildren && isSubmenuOpen && (
