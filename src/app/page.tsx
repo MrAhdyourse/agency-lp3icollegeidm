@@ -141,22 +141,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Promo Section */}
+        {/* Harga Section */}
         <section className="py-12 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
             <div className="bg-gradient-to-r from-gold-400 to-gold-500 rounded-2xl p-8 text-center">
-              <span className="text-4xl mb-4 block">🔥</span>
+              <span className="text-4xl mb-4 block">💰</span>
               <h2 className="text-2xl font-bold text-navy-900 mb-2">
-                Promo Spesial!
+                Lihat Harga Produk
               </h2>
               <p className="text-navy-800 mb-6">
-                Dapatkan penawaran menarik untuk produk pilihan
+                Temukan harga terbaik untuk produk yang Anda butuhkan
               </p>
               <Link 
-                href="/produk/promo" 
+                href="/produk/harga" 
                 className="inline-block bg-navy-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-800 transition-colors"
               >
-                Lihat Promo
+                Lihat Harga
               </Link>
             </div>
           </div>
