@@ -10,7 +10,7 @@ export const appConfig = {
   // Informasi dasar aplikasi
   name: 'AGENCY-WNI',
   fullName: 'Agency WNI - LP3I College',
-  description: 'Portal Informasi Produk & Knowledge untuk Rekanan Agensi',
+  description: 'Portal Informasi Produk & Knowledge untuk Rekanan dan Calon Customer',
   version: '1.0.0',
   
   // Informasi organisasi
@@ -40,7 +40,7 @@ export const appConfig = {
   // Metadata SEO
   seo: {
     title: 'Agency WNI - Portal Rekanan',
-    description: 'Portal informasi produk dan knowledge untuk rekanan agensi LP3I College',
+    description: 'Portal informasi produk dan knowledge untuk rekanan dan calon customer LP3I College',
     keywords: ['agency', 'lp3i', 'college', 'rekanan', 'produk', 'knowledge'],
   },
 } as const
