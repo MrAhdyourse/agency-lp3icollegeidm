@@ -6,14 +6,17 @@ import type { NextConfig } from 'next'
  * Purpose: Konfigurasi Next.js untuk static export (GitHub Pages)
  */
 
+const isProd = process.env.NODE_ENV === 'production'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  basePath: '/agency-lp3icollegeidm',
-  assetPrefix: '/agency-lp3icollegeidm/',
+  basePath: isProd ? basePath : '',
+  assetPrefix: isProd ? `${basePath}/` : '',
 }
 
 export default nextConfig
