@@ -3,20 +3,11 @@
  * File: src/data/menuData.ts
  * Purpose: Data menu sidebar - MUDAH DI-UPDATE
  * 
- * Cara menambah menu baru:
- * 1. Tambahkan object baru di array menuData
- * 2. Untuk sub-menu, tambahkan array children
- * 3. Untuk badge, tambahkan properti badge dan badgeColor
+ * Website ini adalah PUBLIC PORTAL untuk:
+ * - Rekanan Agensi LP3I College
+ * - Calon Customer yang tertarik dengan produk
  * 
- * Contoh:
- * {
- *   id: 'menu-baru',
- *   label: 'Menu Baru',
- *   icon: 'star',
- *   href: '/menu-baru',
- *   badge: 'New',
- *   badgeColor: 'success'
- * }
+ * TIDAK ADA fitur login/user profile
  */
 
 import { MenuGroup } from '@/types/menu.types'
@@ -27,8 +18,8 @@ export const menuData: MenuGroup[] = [
     title: 'Menu Utama',
     items: [
       {
-        id: 'dashboard',
-        label: 'Dashboard',
+        id: 'beranda',
+        label: 'Beranda',
         icon: 'home',
         href: '/',
       },
@@ -103,24 +94,6 @@ export const menuData: MenuGroup[] = [
         label: 'Kontak',
         icon: 'phone',
         href: '/kontak',
-      },
-    ],
-  },
-  {
-    id: 'pengaturan',
-    title: 'Pengaturan',
-    items: [
-      {
-        id: 'profil',
-        label: 'Profil',
-        icon: 'user',
-        href: '/profil',
-      },
-      {
-        id: 'bantuan',
-        label: 'Bantuan',
-        icon: 'help',
-        href: '/bantuan',
       },
     ],
   },
