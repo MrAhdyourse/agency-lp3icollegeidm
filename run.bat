@@ -133,9 +133,9 @@ echo.
 echo  [SUKSES] Build selesai!
 echo.
 echo  [LANGKAH 2] Menyiapkan file...
-echo  [INFO] Mengabaikan node_modules...
-"%GIT%" add . 
-"%GIT%" reset -- node_modules/ 2>nul
+echo  [INFO] Memastikan node_modules tidak di-track...
+"%GIT%" rm -r --cached --ignore-unmatch node_modules/ 2>nul
+"%GIT%" add .
 echo.
 set /p msg="  [LANGKAH 3] Pesan commit: "
 if "!msg!"=="" set msg=Update website
