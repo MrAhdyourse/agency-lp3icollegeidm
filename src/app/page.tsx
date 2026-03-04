@@ -7,6 +7,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/Header'
 import appConfig from '@/config/app.config'
@@ -116,33 +117,33 @@ export default function Home() {
               Aksi Cepat
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <a href="/produk" className="card hover:shadow-lg transition-shadow text-center group">
+              <Link href="/produk" className="card hover:shadow-lg transition-shadow text-center group">
                 <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-navy-100 flex items-center justify-center group-hover:bg-navy-200 transition-colors">
                   <span className="text-3xl">📦</span>
                 </div>
                 <p className="font-medium text-navy-700">Lihat Produk</p>
-              </a>
+              </Link>
 
-              <a href="/knowledge" className="card hover:shadow-lg transition-shadow text-center group">
+              <Link href="/knowledge/artikel" className="card hover:shadow-lg transition-shadow text-center group">
                 <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gold-100 flex items-center justify-center group-hover:bg-gold-200 transition-colors">
                   <span className="text-3xl">📖</span>
                 </div>
                 <p className="font-medium text-navy-700">Knowledge Base</p>
-              </a>
+              </Link>
 
-              <a href="/pengumuman" className="card hover:shadow-lg transition-shadow text-center group">
+              <Link href="/pengumuman" className="card hover:shadow-lg transition-shadow text-center group">
                 <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-200 transition-colors">
                   <span className="text-3xl">📢</span>
                 </div>
                 <p className="font-medium text-navy-700">Pengumuman</p>
-              </a>
+              </Link>
 
-              <a href="/kontak" className="card hover:shadow-lg transition-shadow text-center group">
+              <Link href="/kontak" className="card hover:shadow-lg transition-shadow text-center group">
                 <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                   <span className="text-3xl">📞</span>
                 </div>
                 <p className="font-medium text-navy-700">Hubungi Kami</p>
-              </a>
+              </Link>
             </div>
           </div>
 
