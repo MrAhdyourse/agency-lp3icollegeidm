@@ -1,0 +1,232 @@
+{
+  "lastUpdated": "2026-03-04",
+  "kurs": {
+    "QAR": {
+      "currency": "Qatar Riyal",
+      "rateToIDR": 4633,
+      "source": "xe.com"
+    },
+    "SAR": {
+      "currency": "Saudi Riyal",
+      "rateToIDR": 4511,
+      "source": "xe.com"
+    },
+    "EUR": {
+      "currency": "Euro",
+      "rateToIDR": 19643,
+      "source": "idnfinancials.com"
+    }
+  },
+  "loker": [
+    {
+      "id": 1,
+      "negara": "Qatar",
+      "perusahaan": "KAEFER",
+      "sektor": "Oil & Gas",
+      "status": "AKTIF",
+      "kuotaTerpenuhi": false,
+      "deskripsi": "Peluang kerja di sektor minyak dan gas di Qatar untuk posisi teknis dan manajerial tingkat awal.",
+      "gambar": "/images/loker-luar-negeri/qatar1.webp",
+      "posisi": [
+        {
+          "nama": "Sheet Metal Fitter",
+          "gajiAsli": 1500,
+          "mataUang": "QAR",
+          "gajiIDR": 6949500
+        },
+        {
+          "nama": "Cold Insulator",
+          "gajiAsli": 1500,
+          "mataUang": "QAR",
+          "gajiIDR": 6949500
+        },
+        {
+          "nama": "Cold Insulation Foreman",
+          "gajiAsli": 1700,
+          "mataUang": "QAR",
+          "gajiIDR": 7876100
+        }
+      ],
+      "persyaratan": [
+        "Usia 23 - 45 tahun",
+        "Pendidikan minimal SMA/K (dengan sertifikat) s/d D3",
+        "Memiliki pengalaman pada bidang terkait",
+        "Melampirkan CV terbaru"
+      ],
+      "keuntungan": [
+        "Biaya akomodasi & makan ditanggung",
+        "Gaji lembur",
+        "Transportasi",
+        "Tiket penerbangan",
+        "Asuransi kesehatan",
+        "Jatah cuti 42 hari/2 tahun + Tiket Pulang Pergi"
+      ]
+    },
+    {
+      "id": 2,
+      "negara": "Arab Saudi",
+      "perusahaan": "KAEFER",
+      "sektor": "Oil & Gas",
+      "status": "AKTIF",
+      "kuotaTerpenuhi": false,
+      "deskripsi": "Penempatan di Arab Saudi untuk pengerjaan proyek industri Oil & Gas.",
+      "gambar": "/images/loker-luar-negeri/saudiarab1.webp",
+      "posisi": [
+        {
+          "nama": "Cold Insulator & Fabricator",
+          "gajiAsli": 1500,
+          "mataUang": "SAR",
+          "gajiIDR": 6766500,
+          "keterangan": "Upah dasar"
+        }
+      ],
+      "persyaratan": [
+        "Usia 20 - 48 tahun",
+        "Pengalaman pada bidang terkait"
+      ],
+      "keuntungan": [
+        "Gratis akomodasi & makan",
+        "Tiket penerbangan disediakan"
+      ]
+    },
+    {
+      "id": 3,
+      "negara": "Yunani",
+      "perusahaan": "Hotel Bintang 5",
+      "sektor": "Perhotelan (Hospitality)",
+      "status": "AKTIF",
+      "kuotaTerpenuhi": false,
+      "deskripsi": "Program kerja musiman (seasonal) di sektor perhotelan mewah di Yunani.",
+      "gambar": "/images/loker-luar-negeri/yunani1.webp",
+      "posisi": [
+        {
+          "nama": "Chef",
+          "gajiAsli": 1100,
+          "mataUang": "EUR",
+          "gajiIDR": 21607300
+        },
+        {
+          "nama": "Waiters",
+          "gajiAsli": 1000,
+          "mataUang": "EUR",
+          "gajiIDR": 19643000
+        }
+      ],
+      "overtime": {
+        "jamPerMinggu": 40,
+        "ratePerJam": 6,
+        "mataUang": "EUR",
+        "rateIDR": 117858
+      },
+      "persyaratan": [
+        "Usia 22 - 50 tahun",
+        "Program berlangsung selama 7 bulan (namun dibayar untuk 9 bulan)"
+      ],
+      "keuntungan": [
+        "Gratis akomodasi & makan",
+        "Lingkungan kerja di hotel bintang 5"
+      ]
+    },
+    {
+      "id": 4,
+      "negara": "Jerman",
+      "perusahaan": "Chef Wanted",
+      "sektor": "Kuliner (Hospitality)",
+      "status": "AKTIF",
+      "kuotaTerpenuhi": false,
+      "deskripsi": "Peluang bagi tenaga kerja Indonesia profesional untuk berkarir sebagai Chef di Jerman.",
+      "gambar": "/images/loker-luar-negeri/germany1.webp",
+      "posisi": [
+        {
+          "nama": "Chef",
+          "gajiAsli": 2500,
+          "mataUang": "EUR",
+          "gajiIDR": 49107500
+        }
+      ],
+      "persyaratan": [
+        "Usia 20 - 45 tahun",
+        "Pendidikan minimal D3",
+        "Wajib memiliki Sertifikat B1 Bahasa Jerman",
+        "Siap MCU (Medical Check Up) & Paspor ready"
+      ],
+      "keuntungan": [
+        "Gaji yang sangat kompetitif secara global"
+      ],
+      "catatan": [
+        "Terdapat biaya administrasi dalam program ini"
+      ]
+    },
+    {
+      "id": 5,
+      "negara": "Jepang",
+      "perusahaan": "Goes to Japan",
+      "sektor": "Multinasional",
+      "status": "AKTIF",
+      "kuotaTerpenuhi": false,
+      "deskripsi": "Program komprehensif penempatan kerja di berbagai perusahaan multinasional di Jepang (Caregiver, Food Service, Konstruksi, dll).",
+      "gambar": "/images/loker-luar-negeri/japan1.webp",
+      "posisi": [
+        {
+          "nama": "Berbagai posisi (Zensho, Ana Airport Service, dll)",
+          "gajiMinIDR": 20000000,
+          "gajiMaxIDR": 30000000,
+          "mataUang": "IDR"
+        }
+      ],
+      "persyaratan": [
+        "Pria/Wanita usia 18 - 35 tahun",
+        "Tinggi badan min. 160cm (Pria) & 155cm (Wanita)",
+        "Sehat jasmani/rohani, tidak bertato/tindik, tidak buta warna",
+        "Mendapatkan izin orang tua/wali"
+      ],
+      "keuntungan": [
+        "Pelatihan bahasa Jepang (sampai N4) dan keterampilan kerja (6 bulan)",
+        "Asrama selama pelatihan",
+        "Peluang meraih gelar Sarjana (S1) di Jepang melalui program RPL",
+        "Tersedia pinjaman biaya pendidikan"
+      ]
+    },
+    {
+      "id": 6,
+      "negara": "Malaysia & Singapura",
+      "perusahaan": "Rumah Tangga & Perawatan",
+      "sektor": "Domestik & Perawatan",
+      "status": "AKTIF",
+      "kuotaTerpenuhi": false,
+      "deskripsi": "Penempatan khusus wanita untuk sektor rumah tangga dan perawatan di Malaysia dan Singapura.",
+      "gambar": "/images/loker-luar-negeri/malay-singapore-prt.webp",
+      "posisi": [
+        {
+          "nama": "Asisten Rumah Tangga",
+          "gajiMalaysiaIDR": 7000000,
+          "gajiSingapuraIDR": 6600000,
+          "keterangan": "+ Lembur"
+        },
+        {
+          "nama": "Perawat Bayi",
+          "gajiMalaysiaIDR": 7000000,
+          "gajiSingapuraIDR": 6600000,
+          "keterangan": "+ Lembur"
+        },
+        {
+          "nama": "Perawat Lansia",
+          "gajiMalaysiaIDR": 7000000,
+          "gajiSingapuraIDR": 6600000,
+          "keterangan": "+ Lembur"
+        }
+      ],
+      "persyaratan": [
+        "Khusus Wanita",
+        "Usia 21 - 40 tahun (Malaysia), 23 - 37 tahun (Singapura)",
+        "Bersedia mengikuti pelatihan BLK dan kontrak 2 tahun",
+        "Izin resmi dari keluarga (Orang tua/Suami)"
+      ],
+      "keuntungan": [
+        "Tidak dipungut biaya (gratis)",
+        "Dapat uang saku ± Rp5.000.000",
+        "Proses penempatan cepat dan jalur resmi pemerintah"
+      ]
+    }
+  ]
+}

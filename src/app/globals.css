@@ -172,6 +172,21 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeIn 0.3s ease-out forwards;
 }
 
+/* Marquee Animation - Right to Left, Seamless Loop */
+/* Teks muncul dari kanan, bergerak ke kiri, loop seamless */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
 /* Font Heading Utility */
 .font-heading {
   font-family: 'Poppins', system-ui, sans-serif;

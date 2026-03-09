@@ -46,6 +46,12 @@ export const menuData: MenuGroup[] = [
         ],
       },
       {
+        id: 'sertifikasi',
+        label: 'Skema Sertifikasi',
+        icon: 'certificate',
+        href: '/sertifikasi',
+      },
+      {
         id: 'knowledge',
         label: 'Knowledge Base',
         icon: 'book',
