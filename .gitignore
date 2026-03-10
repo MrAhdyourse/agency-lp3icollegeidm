@@ -47,3 +47,10 @@ Desktop.ini
 
 # Blackbox CLI
 .blackboxcli/
+
+# Large media files
+videos/
+*.webm
+*.mp4
+*.mov
+*.avi
