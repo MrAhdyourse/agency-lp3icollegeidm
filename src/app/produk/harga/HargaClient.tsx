@@ -225,41 +225,172 @@ export default function HargaClient() {
 
             {/* Modal Content */}
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-96px)]">
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {selectedKatalog.items.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors"
+                    className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                      {/* Left: Info */}
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h3 className="font-semibold text-navy-700">
-                            {item.name}
-                          </h3>
-                          {item.badge && (
-                            <span className={`
-                              px-2 py-0.5 text-xs font-semibold rounded-full border
-                              ${getBadgeColorClass(item.badgeColor)}
-                            `}>
-                              {item.badge}
-                            </span>
+                    {/* Item Header */}
+                    <div className="p-5 bg-gradient-to-r from-gray-50 to-white border-b border-gray-100">
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <h3 className="font-semibold text-navy-700 text-lg">
+                              {item.name}
+                            </h3>
+                            {item.badge && (
+                              <span className={`
+                                px-3 py-1 text-xs font-semibold rounded-full border
+                                ${getBadgeColorClass(item.badgeColor)}
+                              `}>
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-sm text-gray-500 mt-1">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Biaya Proses Section - Khusus Loker Luar Negeri */}
+                    {item.biayaProses && (
+                      <div className="p-5 bg-gradient-to-r from-gold-50 to-amber-50 border-b border-gray-100">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                          <div className="flex items-center gap-3">
+                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                              item.isFree 
+                                ? 'bg-green-500' 
+                                : 'bg-gradient-to-br from-gold-500 to-amber-500'
+                            }`}>
+                              <Icon 
+                                name={item.isFree ? "gift" : "wallet"} 
+                                size={24} 
+                                className="text-white" 
+                              />
+                            </div>
+                            <div>
+                              <h4 className="text-sm font-medium text-gray-600">Biaya Proses</h4>
+                              <p className={`text-xl font-bold ${item.isFree ? 'text-green-600' : 'text-gold-700'}`}>
+                                {item.biayaProses}
+                              </p>
+                              {item.biayaProsesNote && (
+                                <p className="text-xs text-gray-500">{item.biayaProsesNote}</p>
+                              )}
+                            </div>
+                          </div>
+                          
+                          {item.isFree && item.uangSaku && (
+                            <div className="flex items-center gap-2 px-4 py-2 bg-green-100 rounded-xl border border-green-200">
+                              <Icon name="sparkles" size={18} className="text-green-600" />
+                              <div>
+                                <p className="text-xs text-green-600 font-medium">Bonus Uang Saku</p>
+                                <p className="text-sm font-bold text-green-700">{item.uangSaku}</p>
+                              </div>
+                            </div>
                           )}
                         </div>
-                        <p className="text-sm text-gray-500 mb-3">
-                          {item.description}
-                        </p>
-                        
+                      </div>
+                    )}
+
+                    {/* Termasuk & Tidak Termasuk Biaya */}
+                    {item.termasukBiaya && item.termasukBiaya.length > 0 && (
+                      <div className="p-5 border-b border-gray-100">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {/* Termasuk Biaya */}
+                          <div className="bg-green-50 rounded-xl p-4 border border-green-100">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+                                <Icon name="check" size={14} className="text-white" />
+                              </div>
+                              <h4 className="font-medium text-green-700">Termasuk Biaya</h4>
+                            </div>
+                            <ul className="space-y-2">
+                              {item.termasukBiaya.map((termasuk, i) => (
+                                <li key={i} className="flex items-start gap-2 text-sm text-green-600">
+                                  <Icon name="checkCircle" size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
+                                  <span>{termasuk}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {/* Tidak Termasuk Biaya */}
+                          {item.tidakTermasukBiaya && item.tidakTermasukBiaya.length > 0 && (
+                            <div className="bg-red-50 rounded-xl p-4 border border-red-100">
+                              <div className="flex items-center gap-2 mb-3">
+                                <div className="w-6 h-6 rounded-full bg-red-500 flex items-center justify-center">
+                                  <Icon name="x" size={14} className="text-white" />
+                                </div>
+                                <h4 className="font-medium text-red-700">Tidak Termasuk</h4>
+                              </div>
+                              <ul className="space-y-2">
+                                {item.tidakTermasukBiaya.map((tidak, i) => (
+                                  <li key={i} className="flex items-start gap-2 text-sm text-red-600">
+                                    <Icon name="xCircle" size={16} className="text-red-500 mt-0.5 flex-shrink-0" />
+                                    <span>{tidak}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Gaji Section */}
+                    {(item.gajiMin || item.gajiMax) && (
+                      <div className="p-5 bg-gradient-to-r from-emerald-50 to-teal-50 border-b border-gray-100">
+                        <div className="flex flex-col md:flex-row md:items-center gap-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                              <Icon name="cash" size={24} className="text-white" />
+                            </div>
+                            <div>
+                              <h4 className="text-sm font-medium text-gray-600">Estimasi Gaji Bulanan</h4>
+                              <div className="flex items-center gap-2">
+                                <span className="text-xl font-bold text-emerald-700">
+                                  {item.gajiMin}
+                                  {item.gajiMax && ` - ${item.gajiMax}`}
+                                </span>
+                              </div>
+                              {item.gajiNote && (
+                                <p className="text-xs text-gray-500">{item.gajiNote}</p>
+                              )}
+                            </div>
+                          </div>
+                          
+                          {/* Price Display */}
+                          <div className="md:ml-auto flex items-center gap-2 px-4 py-2 bg-white rounded-xl border border-emerald-200 shadow-sm">
+                            <Icon name="money" size={18} className="text-emerald-600" />
+                            <div>
+                              <p className="text-xs text-gray-500">Gaji Ditawarkan</p>
+                              <p className="text-sm font-bold text-emerald-700">{item.price}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Benefits & Requirements */}
+                    <div className="p-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* Benefits */}
                         {item.benefits && item.benefits.length > 0 && (
-                          <div className="mb-3">
-                            <h4 className="text-xs font-medium text-gray-600 mb-1">Keuntungan:</h4>
-                            <ul className="text-xs text-gray-500 space-y-1">
+                          <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                                <Icon name="star" size={14} className="text-white" />
+                              </div>
+                              <h4 className="font-medium text-blue-700">Keuntungan</h4>
+                            </div>
+                            <ul className="space-y-2">
                               {item.benefits.map((benefit, i) => (
-                                <li key={i} className="flex items-start gap-2">
-                                  <Icon name="check" size={12} className="text-green-500 mt-0.5 flex-shrink-0" />
+                                <li key={i} className="flex items-start gap-2 text-sm text-blue-600">
+                                  <Icon name="checkCircle" size={16} className="text-blue-500 mt-0.5 flex-shrink-0" />
                                   <span>{benefit}</span>
                                 </li>
                               ))}
@@ -269,12 +400,17 @@ export default function HargaClient() {
                         
                         {/* Requirements */}
                         {item.requirements && item.requirements.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-medium text-gray-600 mb-1">Persyaratan:</h4>
-                            <ul className="text-xs text-gray-500 space-y-1">
+                          <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center">
+                                <Icon name="clipboard" size={14} className="text-white" />
+                              </div>
+                              <h4 className="font-medium text-amber-700">Persyaratan</h4>
+                            </div>
+                            <ul className="space-y-2">
                               {item.requirements.map((req, i) => (
-                                <li key={i} className="flex items-start gap-2">
-                                  <Icon name="dot" size={12} className="text-gray-400 mt-0.5 flex-shrink-0" />
+                                <li key={i} className="flex items-start gap-2 text-sm text-amber-600">
+                                  <Icon name="dot" size={16} className="text-amber-500 mt-0.5 flex-shrink-0" />
                                   <span>{req}</span>
                                 </li>
                               ))}
@@ -283,18 +419,36 @@ export default function HargaClient() {
                         )}
                       </div>
                       
-                      {/* Right: Price */}
-                      <div className="md:text-right flex-shrink-0">
-                        <div className="text-2xl font-bold text-gold-600">
-                          {item.price}
-                        </div>
-                        {item.priceNote && (
-                          <div className="text-xs text-gray-500 mt-1">
-                            {item.priceNote}
+                      {/* Catatan Penting NB */}
+                      {item.catatan && (
+                        <div className="mt-4 p-4 bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl border border-rose-200">
+                          <div className="flex items-start gap-3">
+                            <div className="w-8 h-8 rounded-lg bg-rose-500 flex items-center justify-center flex-shrink-0">
+                              <Icon name="info" size={18} className="text-white" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-rose-700 mb-1">Catatan Penting</h4>
+                              <p className="text-sm text-rose-600">{item.catatan}</p>
+                            </div>
                           </div>
-                        )}
-                      </div>
+                        </div>
+                      )}
                     </div>
+
+                    {/* Price Footer - For items without biayaProses */}
+                    {!item.biayaProses && (
+                      <div className="px-5 py-4 bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p className="text-xs text-gray-500">Harga</p>
+                            <p className="text-xl font-bold text-gold-600">{item.price}</p>
+                            {item.priceNote && (
+                              <p className="text-xs text-gray-500">{item.priceNote}</p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
