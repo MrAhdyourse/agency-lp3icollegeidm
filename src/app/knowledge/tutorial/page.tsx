@@ -8,6 +8,7 @@
 import React, { useState } from 'react'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/Header'
+import ComingSoonOverlay from '@/components/ComingSoonOverlay'
 
 export default function TutorialPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -28,7 +29,7 @@ export default function TutorialPage() {
       />
 
       <main className={`
-        pt-16 min-h-screen transition-all duration-300
+        pt-16 min-h-screen transition-all duration-300 relative
         ${isSidebarCollapsed ? 'lg:pl-[70px]' : 'lg:pl-[280px]'}
       `}>
         <div className="p-6">
@@ -49,6 +50,12 @@ export default function TutorialPage() {
             ))}
           </div>
         </div>
+
+        {/* Coming Soon Overlay */}
+        <ComingSoonOverlay 
+          title="Coming Soon"
+          subtitle="Tutorial akan segera tersedia"
+        />
       </main>
     </div>
   )

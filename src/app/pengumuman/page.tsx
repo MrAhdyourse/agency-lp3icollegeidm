@@ -8,6 +8,7 @@
 import React, { useState } from 'react'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/Header'
+import ComingSoonOverlay from '@/components/ComingSoonOverlay'
 
 export default function PengumumanPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -34,7 +35,7 @@ export default function PengumumanPage() {
       />
 
       <main className={`
-        pt-16 min-h-screen transition-all duration-300
+        pt-16 min-h-screen transition-all duration-300 relative
         ${isSidebarCollapsed ? 'lg:pl-[70px]' : 'lg:pl-[280px]'}
       `}>
         <div className="p-6">
@@ -62,6 +63,12 @@ export default function PengumumanPage() {
             ))}
           </div>
         </div>
+
+        {/* Coming Soon Overlay */}
+        <ComingSoonOverlay 
+          title="Coming Soon"
+          subtitle="Halaman pengumuman akan segera tersedia"
+        />
       </main>
     </div>
   )
