@@ -71,7 +71,7 @@ export default function HargaClient() {
                   Daftar Harga Produk 💰
                 </h1>
                 <p className="text-gray-600">
-                  Informasi harga produk untuk rekanan dan calon customer
+                  Informasi harga produk untuk mitra dan calon customer
                 </p>
               </div>
             </div>

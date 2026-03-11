@@ -1,7 +1,7 @@
 {
-  "name": "agency-wni",
+  "name": "lp3iidm-connect",
   "version": "1.0.0",
-  "description": "Portal Informasi Produk & Knowledge untuk Rekanan Agensi LP3I College",
+  "description": "Portal Informasi Produk & Knowledge untuk Mitra LP3I College",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,11 +12,12 @@
     "deploy": "npm run build && echo 'Build complete! Ready for GitHub Pages'"
   },
   "keywords": [
-    "agency",
+    "lp3iidm",
     "lp3i",
     "college",
-    "rekanan",
-    "portal"
+    "mitra",
+    "portal",
+    "connect"
   ],
   "author": "MrAhdyourse",
   "license": "MIT",

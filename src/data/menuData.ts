@@ -4,7 +4,7 @@
  * Purpose: Data menu sidebar - MUDAH DI-UPDATE
  * 
  * Website ini adalah PUBLIC PORTAL untuk:
- * - Rekanan Agensi LP3I College
+ * - Mitra LP3I College
  * - Calon Customer yang tertarik dengan produk
  * 
  * TIDAK ADA fitur login/user profile

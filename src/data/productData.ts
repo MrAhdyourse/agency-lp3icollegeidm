@@ -1,7 +1,7 @@
 /**
  * Product Data
  * File: src/data/productData.ts
- * Purpose: Data produk dan kontak WhatsApp rekanan agensi
+ * Purpose: Data produk dan kontak WhatsApp mitra LP3I
  */
 
 // Import skema sertifikasi
@@ -44,7 +44,7 @@ export const productCategories: ProductCategory[] = [
   }
 ]
 
-// Kontak WhatsApp Rekanan Agensi
+// Kontak WhatsApp Mitra LP3I
 export interface WhatsAppContact {
   id: string
   name: string

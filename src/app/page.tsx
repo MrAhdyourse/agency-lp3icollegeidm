@@ -1,7 +1,7 @@
 /**
  * Home Page - Public Landing Page
  * File: src/app/page.tsx
- * Purpose: Halaman utama untuk publik (rekanan & calon customer)
+ * Purpose: Halaman utama untuk publik (mitra & calon customer)
  */
 
 'use client'
@@ -85,7 +85,7 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <p className="text-4xl font-bold text-navy-700">50+</p>
-                <p className="text-gray-600 mt-2">Rekanan Aktif</p>
+                <p className="text-gray-600 mt-2">Mitra Aktif</p>
               </div>
               <div className="p-6">
                 <p className="text-4xl font-bold text-navy-700">45+</p>
@@ -127,7 +127,7 @@ export default function Home() {
                   <span className="text-3xl">📢</span>
                 </div>
                 <h3 className="font-semibold text-navy-700 mb-2">Pengumuman</h3>
-                <p className="text-sm text-gray-500">Info terbaru untuk rekanan</p>
+                <p className="text-sm text-gray-500">Info terbaru untuk mitra</p>
               </Link>
 
               <Link href="/agenda" className="card hover:shadow-lg transition-all text-center group">
@@ -189,7 +189,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-navy-700">Artikel Baru</p>
-                    <p className="text-sm text-gray-600">Tips Sukses Menjadi Rekanan Agensi</p>
+                    <p className="text-sm text-gray-600">Tips Sukses Menjadi Mitra LP3I</p>
                     <p className="text-xs text-gray-400 mt-2">1 hari yang lalu</p>
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export default function Home() {
         <section className="py-16 px-6 bg-navy-700 text-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Tertarik Menjadi Rekanan?
+              Tertarik Menjadi Mitra?
             </h2>
             <p className="text-gray-200 mb-8">
               Hubungi kami untuk informasi lebih lanjut tentang kerjasama dan produk yang kami sediakan

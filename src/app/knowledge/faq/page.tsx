@@ -15,8 +15,8 @@ export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqs = [
-    { q: 'Bagaimana cara mendaftar sebagai rekanan?', a: 'Anda dapat menghubungi tim kami melalui halaman kontak.' },
-    { q: 'Apa keuntungan menjadi rekanan?', a: 'Akses produk eksklusif, promo khusus, dan dukungan prioritas.' },
+    { q: 'Bagaimana cara mendaftar sebagai mitra?', a: 'Anda dapat menghubungi tim kami melalui halaman kontak.' },
+    { q: 'Apa keuntungan menjadi mitra?', a: 'Akses produk eksklusif, promo khusus, dan dukungan prioritas.' },
     { q: 'Bagaimana cara mengakses materi?', a: 'Login ke portal dan pilih menu Knowledge Base.' },
   ]
 

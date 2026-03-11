@@ -1,6 +1,6 @@
-# AGENCY-WNI
+# LP3IIDM-CONNECT
 
-Portal Informasi Produk & Knowledge untuk Rekanan Agensi LP3I College
+Portal Informasi Produk & Knowledge untuk Mitra LP3I College
 
 ## 🚀 Tech Stack
 
@@ -12,7 +12,7 @@ Portal Informasi Produk & Knowledge untuk Rekanan Agensi LP3I College
 ## 📁 Struktur Proyek
 
 ```
-AGENCY-WNI/
+LP3IIDM-CONNECT/
 ├── src/
 │   ├── app/                    # Halaman (Next.js App Router)
 │   │   ├── layout.tsx          # Layout utama
@@ -97,7 +97,7 @@ git push origin main
 ## 🌐 Deployment
 
 Website akan di-deploy ke:
-**https://mrahdyourse.github.io/agency-lp3icollegeidm**
+**https://mrahdyourse.github.io/lp3iidm-connect**
 
 ## 📝 License
 
