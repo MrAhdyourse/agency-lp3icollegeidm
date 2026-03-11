@@ -224,7 +224,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         {!isCollapsed && (
           <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-navy-600">
             <p className="text-xs text-white/50 text-center">
-              © 2024 {appConfig.name}
+              © 2026 {appConfig.name}
             </p>
           </div>
         )}

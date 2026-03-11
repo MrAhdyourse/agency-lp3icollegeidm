@@ -46,7 +46,7 @@ export default function ArtikelPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-navy-700 mb-1">Artikel {item}</h3>
-                    <p className="text-sm text-gray-500 mb-2">Penulis • 1 Jan 2024</p>
+                    <p className="text-sm text-gray-500 mb-2">Penulis • 1 Jan 2026</p>
                     <p className="text-sm text-gray-600">Ringkasan artikel yang menarik dan informatif...</p>
                   </div>
                 </div>

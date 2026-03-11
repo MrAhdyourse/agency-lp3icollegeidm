@@ -41,10 +41,10 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick, isSidebarOpen }) => {
           <div className="overflow-hidden whitespace-nowrap">
             <div className="animate-marquee inline-flex">
               <span className="text-gray-600 font-medium px-4">
-                Selamat Datang di Portal Informasi Produk & Knowledge Mitra LP3I College Indramayu • Dapatkan Informasi Terbaru Mengenai Program Pelatihan Digital Marketing 2024 • Hubungi Kami Untuk Konsultasi Lebih Lanjut
+                Selamat Datang di Portal Informasi Produk & Knowledge Mitra LP3I College Indramayu • Dapatkan Informasi Terbaru Mengenai Program Pelatihan Digital Marketing 2026 • Hubungi Kami Untuk Konsultasi Lebih Lanjut
               </span>
               <span className="text-gray-600 font-medium px-4">
-                Selamat Datang di Portal Informasi Produk & Knowledge Mitra LP3I College Indramayu • Dapatkan Informasi Terbaru Mengenai Program Pelatihan Digital Marketing 2024 • Hubungi Kami Untuk Konsultasi Lebih Lanjut
+                Selamat Datang di Portal Informasi Produk & Knowledge Mitra LP3I College Indramayu • Dapatkan Informasi Terbaru Mengenai Program Pelatihan Digital Marketing 2026 • Hubungi Kami Untuk Konsultasi Lebih Lanjut
               </span>
             </div>
           </div>

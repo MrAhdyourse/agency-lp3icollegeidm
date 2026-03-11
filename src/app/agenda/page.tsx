@@ -15,9 +15,9 @@ export default function AgendaPage() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
 
   const events = [
-    { title: 'Workshop Digital Marketing', date: '20 Maret 2024', time: '09:00 - 12:00', type: 'Workshop' },
-    { title: 'Meeting Bulanan', date: '25 Maret 2024', time: '14:00 - 16:00', type: 'Meeting' },
-    { title: 'Training Produk', date: '1 April 2024', time: '10:00 - 15:00', type: 'Training' },
+    { title: 'Workshop Digital Marketing', date: '20 Maret 2026', time: '09:00 - 12:00', type: 'Workshop' },
+    { title: 'Meeting Bulanan', date: '25 Maret 2026', time: '14:00 - 16:00', type: 'Meeting' },
+    { title: 'Training Produk', date: '1 April 2026', time: '10:00 - 15:00', type: 'Training' },
   ]
 
   return (

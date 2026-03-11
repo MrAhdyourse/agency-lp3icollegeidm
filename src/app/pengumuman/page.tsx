@@ -15,9 +15,9 @@ export default function PengumumanPage() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
 
   const announcements = [
-    { title: 'Meeting Bulanan', date: '15 Maret 2024', content: 'Meeting akan dilaksanakan secara online...', badge: 'Penting' },
-    { title: 'Update Produk Baru', date: '10 Maret 2024', content: 'Kami menghadirkan produk terbaru...', badge: 'Baru' },
-    { title: 'Libur Nasional', date: '1 Maret 2024', content: 'Kantor tutup pada hari libur nasional...', badge: 'Info' },
+    { title: 'Meeting Bulanan', date: '15 Maret 2026', content: 'Meeting akan dilaksanakan secara online...', badge: 'Penting' },
+    { title: 'Update Produk Baru', date: '10 Maret 2026', content: 'Kami menghadirkan produk terbaru...', badge: 'Baru' },
+    { title: 'Libur Nasional', date: '1 Maret 2026', content: 'Kantor tutup pada hari libur nasional...', badge: 'Info' },
   ]
 
   return (

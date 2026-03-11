@@ -10,6 +10,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/Header'
+import AnimatedCounter from '@/components/AnimatedCounter'
 import appConfig from '@/config/app.config'
 
 export default function Home() {
@@ -79,21 +80,21 @@ export default function Home() {
         <section className="py-12 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div className="p-6">
-                <p className="text-4xl font-bold text-navy-700">128+</p>
-                <p className="text-gray-600 mt-2">Produk Tersedia</p>
+              <div className="p-6 group hover:scale-105 transition-transform duration-300">
+                <AnimatedCounter end={128} suffix="+" />
+                <p className="text-gray-600 mt-2 font-medium">Produk Tersedia</p>
               </div>
-              <div className="p-6">
-                <p className="text-4xl font-bold text-navy-700">50+</p>
-                <p className="text-gray-600 mt-2">Mitra Aktif</p>
+              <div className="p-6 group hover:scale-105 transition-transform duration-300">
+                <AnimatedCounter end={50} suffix="+" />
+                <p className="text-gray-600 mt-2 font-medium">Mitra Aktif</p>
               </div>
-              <div className="p-6">
-                <p className="text-4xl font-bold text-navy-700">45+</p>
-                <p className="text-gray-600 mt-2">Artikel & Tutorial</p>
+              <div className="p-6 group hover:scale-105 transition-transform duration-300">
+                <AnimatedCounter end={45} suffix="+" />
+                <p className="text-gray-600 mt-2 font-medium">Artikel & Tutorial</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 group hover:scale-105 transition-transform duration-300">
                 <p className="text-4xl font-bold text-navy-700">24/7</p>
-                <p className="text-gray-600 mt-2">Support</p>
+                <p className="text-gray-600 mt-2 font-medium">Support</p>
               </div>
             </div>
           </div>
@@ -176,7 +177,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-navy-700">Produk Baru</p>
-                    <p className="text-sm text-gray-600">Program Pelatihan Digital Marketing 2024</p>
+                    <p className="text-sm text-gray-600">Program Pelatihan Digital Marketing 2026</p>
                     <p className="text-xs text-gray-400 mt-2">2 jam yang lalu</p>
                   </div>
                 </div>
@@ -202,7 +203,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-navy-700">Pengumuman</p>
-                    <p className="text-sm text-gray-600">Jadwal Meeting Bulanan - Maret 2024</p>
+                    <p className="text-sm text-gray-600">Jadwal Meeting Bulanan - Maret 2026</p>
                     <p className="text-xs text-gray-400 mt-2">3 hari yang lalu</p>
                   </div>
                 </div>
@@ -215,7 +216,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-navy-700">Agenda</p>
-                    <p className="text-sm text-gray-600">Workshop Online: Strategi Bisnis 2024</p>
+                    <p className="text-sm text-gray-600">Workshop Online: Strategi Bisnis 2026</p>
                     <p className="text-xs text-gray-400 mt-2">5 hari yang lalu</p>
                   </div>
                 </div>
