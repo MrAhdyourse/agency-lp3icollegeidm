@@ -47,6 +47,7 @@ Desktop.ini
 
 # Blackbox CLI
 .blackboxcli/
+.blackbox/
 
 # Large media files
 videos/
