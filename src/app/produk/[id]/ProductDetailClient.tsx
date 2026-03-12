@@ -13,6 +13,7 @@ import Sidebar from '@/components/Sidebar'
 import Header from '@/components/Header'
 import Icon from '@/components/Icon'
 import { getProductById, getCategoryById, whatsappContacts, generateWhatsAppLink } from '@/data/productData'
+import { getImagePath } from '@/utils/imagePath'
 
 interface ProductDetailClientProps {
   productId: string
@@ -69,7 +70,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
   }
 
   const category = getCategoryById(product.categoryId)
-  const productImage = product.image || null
+  const productImage = product.image ? getImagePath(product.image) : null
 
   const getBadgeColorClass = (color?: string) => {
     switch (color) {

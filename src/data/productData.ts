@@ -18,6 +18,7 @@ export interface ProductCategory {
   description: string
   icon: string
   gradient: string
+  isComingSoon?: boolean
 }
 
 export const productCategories: ProductCategory[] = [
@@ -33,7 +34,8 @@ export const productCategories: ProductCategory[] = [
     name: 'Pendidikan',
     description: 'Pendidikan profesi bersama LP3I College Indramayu',
     icon: 'graduation',
-    gradient: 'from-blue-500 to-indigo-600'
+    gradient: 'from-blue-500 to-indigo-600',
+    isComingSoon: true
   },
   {
     id: 'loker-luar-negeri',

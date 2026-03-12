@@ -25,6 +25,8 @@ import {
   SkemaSertifikasi,
   SkemaKategori
 } from '@/data/productData'
+import ComingSoonOverlay from '@/components/ComingSoonOverlay'
+import { getImagePath } from '@/utils/imagePath'
 
 export default function ProdukClient() {
   const searchParams = useSearchParams()
@@ -357,7 +359,7 @@ export default function ProdukClient() {
           )}
 
           {/* Products Grid - Show for non-sertifikasi categories */}
-          {selectedCategory !== 'sertifikasi' && filteredProducts.length > 0 && (
+          {selectedCategory !== 'sertifikasi' && !getCategoryById(selectedCategory || '')?.isComingSoon && filteredProducts.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredProducts.map((product, index) => (
                 <button
@@ -377,7 +379,7 @@ export default function ProdukClient() {
                     <div className="relative h-40 bg-gradient-to-br from-navy-50 to-gold-50 overflow-hidden">
                       {product.image ? (
                         <Image
-                          src={product.image}
+                          src={getImagePath(product.image)}
                           alt={product.name}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -581,8 +583,68 @@ export default function ProdukClient() {
             </div>
           )}
 
+          {/* Coming Soon for Pendidikan Category */}
+          {selectedCategory === 'pendidikan' && getCategoryById(selectedCategory)?.isComingSoon && (
+            <div className="relative">
+              {/* Products Grid with Coming Soon Overlay */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 opacity-50 pointer-events-none">
+                {filteredProducts.filter(p => p.categoryId === 'pendidikan').map((product, index) => (
+                  <div
+                    key={product.id}
+                    className="bg-white rounded-2xl shadow-md overflow-hidden"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <div className="relative h-40 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 to-indigo-100/30" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                          <Icon name="graduation" size={32} className="text-white" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <div className="mb-2">
+                        <span className="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
+                          Pendidikan
+                        </span>
+                      </div>
+                      <h3 className="font-semibold text-navy-700 mb-2 line-clamp-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-sm text-gray-500 line-clamp-2">
+                        {product.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Coming Soon Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center max-w-md mx-4">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                    <Icon name="clock" size={40} className="text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-navy-700 mb-2">
+                    Coming Soon
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Kategori Pendidikan akan segera tersedia. Silakan hubungi kami untuk informasi lebih lanjut.
+                  </p>
+                  <Link
+                    href="/kontak"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-medium hover:from-blue-600 hover:to-indigo-700 transition-all"
+                  >
+                    <Icon name="phone" size={18} />
+                    Hubungi Kami
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Empty State for Products */}
-          {selectedCategory !== 'sertifikasi' && filteredProducts.length === 0 && (
+          {selectedCategory !== 'sertifikasi' && !getCategoryById(selectedCategory || '')?.isComingSoon && filteredProducts.length === 0 && (
             <div className="text-center py-16">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
                 <Icon name="search" size={40} className="text-gray-400" />

@@ -18,6 +18,7 @@ import {
   SkemaSertifikasi,
   getSkemaKategoriById
 } from '@/data/productData'
+import { getImagePath } from '@/utils/imagePath'
 
 interface ProductDetailModalProps {
   product: Product | null
@@ -75,7 +76,7 @@ export default function ProductDetailModal({ product, skema, isOpen, onClose }: 
 
   const category = product ? getCategoryById(product.categoryId) : null
   const skemaKategori = skema ? getSkemaKategoriById(skema.kategori) : null
-  const productImage = selectedImage || (product?.image) || null
+  const productImage = selectedImage ? getImagePath(selectedImage) : (product?.image ? getImagePath(product.image) : null)
   
   // Get item name and description based on type
   const itemName = product?.name || skema?.nama || ''
@@ -193,7 +194,7 @@ export default function ProductDetailModal({ product, skema, isOpen, onClose }: 
                       `}
                     >
                       <Image
-                        src={product.image}
+                        src={getImagePath(product.image)}
                         alt={product.name}
                         fill
                         className="object-cover"
